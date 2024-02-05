@@ -5,7 +5,11 @@ const getEmployeeByName = (employeeName) => {
     return {};
   }
 
-  return data.employees.find((employe) => employe.firstName || employe.lastName === employeeName);
+  return data.employees.find(
+    (employe) =>
+      employe.firstName === employeeName
+      || employe.lastName === employeeName,
+  );
 };
-console.log(getEmployeeByName(''));
+
 module.exports = getEmployeeByName;
